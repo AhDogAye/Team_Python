@@ -71,7 +71,6 @@
   <ItemGroup>
     <Folder Include="Content\Audio\" />
     <Folder Include="Content\Fonts\" />
-    <Folder Include="Content\Units\" />
     <Folder Include="Source\GamePlay\World\Units\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
