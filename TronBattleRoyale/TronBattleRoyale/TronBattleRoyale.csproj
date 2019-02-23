@@ -41,39 +41,18 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="firebase.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="firebase.Designer.cs">
-      <DependentUpon>firebase.cs</DependentUpon>
-    </Compile>
     <Compile Include="GameGlobals.cs" />
     <Compile Include="main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source\Engine\Globals.cs" />
     <Compile Include="Source\Engine\Input\McKey.cs" />
     <Compile Include="Source\Engine\Input\McKeyboard.cs" />
+    <Compile Include="Source\Engine\McTimer.cs" />
     <Compile Include="Source\GamePlay\World.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="FireSharp, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FireSharp.1.1.0\lib\net45\FireSharp.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="FireSharp.Serialization.JsonNet, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FireSharp.Serialization.JsonNet.1.1.0\lib\net45\FireSharp.Serialization.JsonNet.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="MonoGame.Framework">
       <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="RestSharp, Version=104.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\RestSharp.104.4.0\lib\net4\RestSharp.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
@@ -85,13 +64,24 @@
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
     <None Include="app.manifest" />
-    <None Include="packages.config" />
+    <Content Include="Content\2d\Tron Bikes\Bike1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\2d\Tron Bikes\Bike2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\2d\Tron Bikes\Bike3 .xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\2d\Tron Bikes\Bike4.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Content\2d\Board\Map %28Custom%29.xnb" />
+    <None Include="Content\2d\Board\Map_2 %28Custom%29.xnb" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\2d\" />
     <Folder Include="Content\Audio\" />
     <Folder Include="Content\Fonts\" />
-    <Folder Include="Content\Units\" />
     <Folder Include="Source\GamePlay\World\Units\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
