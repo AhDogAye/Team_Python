@@ -63,10 +63,18 @@
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
     <None Include="app.manifest" />
-    <None Include="Content\2d\Tron Bikes\Bike1.xnb" />
-    <None Include="Content\2d\Tron Bikes\Bike2.xnb" />
-    <None Include="Content\2d\Tron Bikes\Bike3 .xnb" />
-    <None Include="Content\2d\Tron Bikes\Bike4.xnb" />
+    <Content Include="Content\2d\Tron Bikes\Bike1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\2d\Tron Bikes\Bike2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\2d\Tron Bikes\Bike3 .xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\2d\Tron Bikes\Bike4.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Audio\" />
