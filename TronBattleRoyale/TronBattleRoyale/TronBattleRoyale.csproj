@@ -60,7 +60,7 @@
   <ItemGroup>
     <Content Include="Content\2d\Tron Bikes\Bike1.png" />
     <Content Include="Content\2d\Tron Bikes\Bike2.png" />
-    <Content Include="Content\2d\Tron Bikes\Bike3.png" />
+    <Content Include="Content\2d\Tron Bikes\Bike3 .png" />
     <Content Include="Content\2d\Tron Bikes\Bike4.png" />
     <Content Include="Icon.ico" />
   </ItemGroup>
