@@ -29,17 +29,6 @@ namespace TronBattleRoyale
             
         }
 
-
-        public virtual void AddEnemy(object INFO)
-        {
-            
-        }
-
-        public virtual void AddBullet(object INFO)
-        {
-            
-        }
-
         public virtual void Draw()
         {
             
