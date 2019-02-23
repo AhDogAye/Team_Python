@@ -7,12 +7,14 @@ namespace TronBattleRoyale
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
-    public class Game1 : Game
+    public class main : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        public Game1()
+        World world;
+
+        public main()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -28,6 +30,14 @@ namespace TronBattleRoyale
         {
             // TODO: Add your initialization logic here
 
+            Globals.screenWidth = 800;
+            Globals.screenHeight = 500;
+
+            graphics.PreferredBackBufferWidth = Globals.screenWidth;
+            graphics.PreferredBackBufferHeight = Globals.screenHeight;
+
+            graphics.ApplyChanges();
+
             base.Initialize();
         }
 
@@ -38,7 +48,12 @@ namespace TronBattleRoyale
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(GraphicsDevice);
+            Globals.content = this.Content;
+            Globals.spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            Globals.keyboard = new McKeyboard();
+
+            world = new World();
 
             // TODO: use this.Content to load your game content here
         }
@@ -62,7 +77,14 @@ namespace TronBattleRoyale
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
+            Globals.gameTime = gameTime;
+            Globals.keyboard.Update();
+
+            world.Update();
+
             // TODO: Add your update logic here
+
+            Globals.keyboard.UpdateOld();
 
             base.Update(gameTime);
         }
@@ -77,7 +99,33 @@ namespace TronBattleRoyale
 
             // TODO: Add your drawing code here
 
+            Globals.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
+
+            world.Draw();
+
+
+
+            Globals.spriteBatch.End();
+
             base.Draw(gameTime);
         }
     }
+
+#if WINDOWS || LINUX
+    /// <summary>
+    /// The main class.
+    /// </summary>
+    public static class Program
+    {
+        /// <summary>
+        /// The main entry point for the application.
+        /// </summary>
+        static void Main()
+        {
+            using (var game = new main())
+                game.Run();
+        }
+    }
+#endif
+
 }
