@@ -30,8 +30,8 @@ namespace TronBattleRoyale
         {
             // TODO: Add your initialization logic here
 
-            Globals.screenWidth = 800;
-            Globals.screenHeight = 500;
+            Globals.screenWidth = 1600;
+            Globals.screenHeight = 1300;
 
             graphics.PreferredBackBufferWidth = Globals.screenWidth;
             graphics.PreferredBackBufferHeight = Globals.screenHeight;

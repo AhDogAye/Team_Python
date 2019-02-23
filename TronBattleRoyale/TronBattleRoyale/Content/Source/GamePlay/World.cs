@@ -17,6 +17,7 @@ namespace TronBattleRoyale
 
     public class World
     {
+        public basic2d background;
 
         public World()
         {
