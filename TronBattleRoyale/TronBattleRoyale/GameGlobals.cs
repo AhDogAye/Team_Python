@@ -16,8 +16,7 @@ namespace TronBattleRoyale
 {
     public class GameGlobals
     {
-
-
         public static PassObject PassBullet, PassEnemy;
+
     }
 }

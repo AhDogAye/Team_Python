@@ -47,7 +47,6 @@
     <Compile Include="Source\Engine\Globals.cs" />
     <Compile Include="Source\Engine\Input\McKey.cs" />
     <Compile Include="Source\Engine\Input\McKeyboard.cs" />
-    <Compile Include="Source\Engine\McTimer.cs" />
     <Compile Include="Source\GamePlay\World.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -59,15 +58,15 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\2d\Tron Bikes\Bike1.png" />
-    <Content Include="Content\2d\Tron Bikes\Bike2.png" />
-    <Content Include="Content\2d\Tron Bikes\Bike3 .png" />
-    <Content Include="Content\2d\Tron Bikes\Bike4.png" />
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
     <None Include="app.manifest" />
+    <None Include="Content\2d\Tron Bikes\Bike1.xnb" />
+    <None Include="Content\2d\Tron Bikes\Bike2.xnb" />
+    <None Include="Content\2d\Tron Bikes\Bike3 .xnb" />
+    <None Include="Content\2d\Tron Bikes\Bike4.xnb" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Audio\" />
