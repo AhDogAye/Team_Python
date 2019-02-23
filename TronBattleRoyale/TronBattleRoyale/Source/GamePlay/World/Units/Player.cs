@@ -34,7 +34,7 @@ namespace TronBattleRoyale
                 }
             }
 
-            if (Globals.keyboard.GetPress("D"))
+            else if (Globals.keyboard.GetPress("D"))
             {
                 if (pos.X < 775)
                 {
@@ -42,7 +42,7 @@ namespace TronBattleRoyale
                 }
             }
 
-            if (Globals.keyboard.GetPress("W"))
+            else if (Globals.keyboard.GetPress("W"))
             {
                 if (pos.Y > 25)
                 {
@@ -50,21 +50,11 @@ namespace TronBattleRoyale
                 }
             }
 
-            if (Globals.keyboard.GetPress("S"))
+            else if (Globals.keyboard.GetPress("S"))
             {
                 if (pos.Y < 455)
                 {
                     pos = new Vector2(pos.X, pos.Y + 3);
-                }
-            }
-
-            if (Globals.keyboard.GetPress("Space"))
-            {
-                attackTimer.UpdateTimer();
-                if (attackTimer.Test())
-                {
-                    GameGlobals.PassBullet(new PlayerBullet(new Vector2(pos.X, pos.Y), this, new Vector2(pos.X, 0)));
-                    attackTimer.ResetToZero();
                 }
             }
 
