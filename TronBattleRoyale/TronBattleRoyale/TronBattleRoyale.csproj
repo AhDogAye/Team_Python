@@ -44,19 +44,11 @@
     <Compile Include="GameGlobals.cs" />
     <Compile Include="main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
-    <Compile Include="Content\Source\Engine\Globals.cs" />
-    <Compile Include="Content\Source\Engine\Input\McKey.cs" />
-    <Compile Include="Content\Source\Engine\Input\McKeyboard.cs" />
-    <Compile Include="Content\Source\GamePlay\World.cs" />
-=======
-    <Compile Include="Source\Engine\basic2d.cs" />
     <Compile Include="Source\Engine\Globals.cs" />
     <Compile Include="Source\Engine\Input\McKey.cs" />
     <Compile Include="Source\Engine\Input\McKeyboard.cs" />
     <Compile Include="Source\Engine\McTimer.cs" />
     <Compile Include="Source\GamePlay\World.cs" />
->>>>>>> 76a3cdce7837fdb7dde7c7699abba5e412866e7f
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
@@ -90,7 +82,7 @@
   <ItemGroup>
     <Folder Include="Content\Audio\" />
     <Folder Include="Content\Fonts\" />
-    <Folder Include="Content\Source\GamePlay\World\Units\" />
+    <Folder Include="Source\GamePlay\World\Units\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
