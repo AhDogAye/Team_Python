@@ -47,6 +47,7 @@
     <Compile Include="Source\Engine\Globals.cs" />
     <Compile Include="Source\Engine\Input\McKey.cs" />
     <Compile Include="Source\Engine\Input\McKeyboard.cs" />
+    <Compile Include="Source\Engine\McTimer.cs" />
     <Compile Include="Source\GamePlay\World.cs" />
   </ItemGroup>
   <ItemGroup>
