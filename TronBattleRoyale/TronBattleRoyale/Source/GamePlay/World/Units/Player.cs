@@ -18,7 +18,8 @@ namespace TronBattleRoyale
     {
 
         public McTimer attackTimer = new McTimer(125);
-
+        public int direction = 0;
+        public int moving = 0;
         public Player(string PATH, Vector2 POS, Vector2 DIMS) : base(PATH, POS, DIMS)
         {
 
@@ -26,39 +27,46 @@ namespace TronBattleRoyale
 
         public override void Update()
         {
-            if (Globals.keyboard.GetPress("A"))
-            {
-                if (pos.X > 25)
+            //while (moving < 100)
+            
+                if (Globals.keyboard.GetPress("A") && direction != 2)
                 {
-                    pos = new Vector2(pos.X - 10, pos.Y);
+                    if (pos.X > 25)
+                    {
+                        pos = new Vector2(pos.X - 10, pos.Y);
+                        direction = 1;
+                    }
                 }
-            }
 
-            else if (Globals.keyboard.GetPress("D"))
-            {
-                if (pos.X < 775)
+                else if (Globals.keyboard.GetPress("D") && direction != 1)
                 {
-                    pos = new Vector2(pos.X + 10, pos.Y);
+                    if (pos.X < 775)
+                    {
+                        pos = new Vector2(pos.X + 10, pos.Y);
+                        direction = 2;
+                    }
                 }
-            }
 
-            else if (Globals.keyboard.GetPress("W"))
-            {
-                if (pos.Y > 25)
+                else if (Globals.keyboard.GetPress("W") && direction != 4)
                 {
-                    pos = new Vector2(pos.X, pos.Y - 10);
+                    if (pos.Y > 25)
+                    {
+                        pos = new Vector2(pos.X, pos.Y - 10);
+                        direction = 3; // if going up wont let you go down
+                    }
                 }
-            }
 
-            else if (Globals.keyboard.GetPress("S"))
-            {
-                if (pos.Y < 455)
+                else if (Globals.keyboard.GetPress("S") && direction != 3)
                 {
-                    pos = new Vector2(pos.X, pos.Y + 10);
+                    if (pos.Y < 455)
+                    {
+                        pos = new Vector2(pos.X, pos.Y + 10);
+                        direction = 4;
+                    }
                 }
-            }
 
-            base.Update();
+                base.Update();
+            
         }
 
         public override void Draw()
