@@ -32,7 +32,7 @@ namespace TronBattleRoyale
             client = new FireSharp.FirebaseClient(config);
         }
 
-        //private async void position(object sender, EventArgs e)
+        //private async void button_a(object sender, EventArgs e)
         //{
         //   SetResponse response = await client.SetTaskAsync();
         //   Basic2d result = response.ResultAs
