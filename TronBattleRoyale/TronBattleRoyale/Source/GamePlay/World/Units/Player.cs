@@ -30,7 +30,7 @@ namespace TronBattleRoyale
             {
                 if (pos.X > 25)
                 {
-                    pos = new Vector2(pos.X - 3, pos.Y);
+                    pos = new Vector2(pos.X - 10, pos.Y);
                 }
             }
 
@@ -38,7 +38,7 @@ namespace TronBattleRoyale
             {
                 if (pos.X < 775)
                 {
-                    pos = new Vector2(pos.X + 3, pos.Y);
+                    pos = new Vector2(pos.X + 10, pos.Y);
                 }
             }
 
@@ -46,7 +46,7 @@ namespace TronBattleRoyale
             {
                 if (pos.Y > 25)
                 {
-                    pos = new Vector2(pos.X, pos.Y - 3);
+                    pos = new Vector2(pos.X, pos.Y - 10);
                 }
             }
 
@@ -54,7 +54,7 @@ namespace TronBattleRoyale
             {
                 if (pos.Y < 455)
                 {
-                    pos = new Vector2(pos.X, pos.Y + 3);
+                    pos = new Vector2(pos.X, pos.Y + 10);
                 }
             }
 
