@@ -18,19 +18,27 @@ namespace TronBattleRoyale
     public class World
     {
 
+        public Player player;
+
         public World()
         {
-            
+
+            player = new Player("2d//Tron Bikes//Bike1", new Vector2(300, 300), new Vector2(48, 48));
+
         }
 
         public virtual void Update()
         {
-            
+
+            player.Update();
+               
         }
 
         public virtual void Draw()
         {
-            
+
+            player.Draw();
+
         }
 
     }
