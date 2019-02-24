@@ -43,7 +43,14 @@
   <ItemGroup>
     <Compile Include="GameGlobals.cs" />
     <Compile Include="main.cs" />
+    <Compile Include="Networking\firebase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Networking\firebase.designer.cs">
+      <DependentUpon>firebase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\Engine\basic2d.cs" />
     <Compile Include="Source\Engine\Globals.cs" />
     <Compile Include="Source\Engine\Input\McKey.cs" />
     <Compile Include="Source\Engine\Input\McKeyboard.cs" />
